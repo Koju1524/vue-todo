@@ -3,6 +3,7 @@ import HeaderComponent from "./components/HeaderComponent";
 import VocabularyListComponent from "./components/VocabularyListComponent";
 import VocabularyShowComponent from "./components/VocabularyShowComponent";
 import VocabularyCreateComponent from "./components/VocabularyCreateComponent";
+import VocabularyEditComponent from "./components/VocabularyEditComponent";
 
 /**
  * First we will load all of this project's JavaScript dependencies which
@@ -35,6 +36,12 @@ const router = new VueRouter({
             component: VocabularyShowComponent,
             props: true
         },
+        {
+            path: '/vocabulary/:vocabularyId/edit',
+            name: 'vocabulary.edit',
+            component: VocabularyEditComponent,
+            props: true
+      },
     ]
 });
 
