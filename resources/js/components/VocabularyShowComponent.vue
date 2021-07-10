@@ -1,6 +1,6 @@
 <template>
   <div class="container">
-    <div class="row justify-content-center">
+    <div class="row jusentence-center">
       <div class="col-sm-6">
         <form>
           <div class="form-group row border-bottom">
@@ -14,9 +14,9 @@
             value="title title">
           </div>
           <div class="form-group row border-bottom">
-            <label for="content" class="col-sm-3 col-form-label">Content</label>
-            <input type="text" class="col-sm-9 form-control-plaintext" readonly id="content"
-            value="content content">
+            <label for="sentence" class="col-sm-3 col-form-label">Sentence</label>
+            <input type="text" class="col-sm-9 form-control-plaintext" readonly id="sentence"
+            value="sentence sentence">
           </div>
           <div class="form-group row border-bottom">
             <label for="person-in-charge" class="col-sm-3 col-form-label">Person In Charge</label>
