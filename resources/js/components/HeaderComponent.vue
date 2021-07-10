@@ -7,7 +7,9 @@
           <router-link v-bind:to="{name: 'vocabulary.list'}">
             <button class="btn btn-success">Vocubulary</button>
           </router-link>
+          <router-link v-bind:to="{name: 'vocabulary.create'}">
             <button class="btn btn-success">Add</button>
+          </router-link>
         </div>
       </nav>
     </div>
