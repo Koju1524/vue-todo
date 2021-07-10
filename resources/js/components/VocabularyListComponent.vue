@@ -17,7 +17,9 @@
                 <td>Title1</td>
                 <td>Content1</td>
                 <td>
+                  <router-link v-bind:to="{name: 'vocabulary.show', params: {vocabularyId: 1}}">
                     <button class="btn btn-primary">Show</button>
+                  </router-link>
                 </td>
                 <td>
                     <button class="btn btn-success">Edit</button>
@@ -31,7 +33,9 @@
                 <td>Title2</td>
                 <td>Content2</td>
                 <td>
+                  <router-link v-bind:to="{name: 'vocabulary.show', params: {vocabularyId: 2}}">
                     <button class="btn btn-primary">Show</button>
+                  </router-link>
                 </td>
                 <td>
                     <button class="btn btn-success">Edit</button>
@@ -45,7 +49,9 @@
                 <td>Title3</td>
                 <td>Content3</td>
                 <td>
+                  <router-link v-bind:to="{name: 'vocabulary.show', params: {vocabularyId: 3}}">
                     <button class="btn btn-primary">Show</button>
+                  </router-link>
                 </td>
                 <td>
                     <button class="btn btn-success">Edit</button>
