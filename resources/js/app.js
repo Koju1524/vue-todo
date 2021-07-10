@@ -1,6 +1,7 @@
 import VueRouter from 'vue-router';
 import HeaderComponent from "./components/HeaderComponent";
 import VocabularyListComponent from "./components/VocabularyListComponent";
+import VocabularyShowComponent from "./components/VocabularyShowComponent";
 
 /**
  * First we will load all of this project's JavaScript dependencies which
@@ -21,6 +22,12 @@ const router = new VueRouter({
             path: '/vocabulary',
             name: 'vocabulary.list',
             component: VocabularyListComponent
+        },
+        {
+            path: '/vocabulary/:vocabularyId',
+            name: 'vocabulary.show',
+            component: VocabularyShowComponent,
+            props: true
         },
     ]
 });
