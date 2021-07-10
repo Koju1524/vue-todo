@@ -1,3 +1,10 @@
+import VueRouter from 'vue-router';
+import HeaderComponent from "./components/HeaderComponent";
+import VocabularyListComponent from "./components/VocabularyListComponent";
+import VocabularyShowComponent from "./components/VocabularyShowComponent";
+import VocabularyCreateComponent from "./components/VocabularyCreateComponent";
+import VocabularyEditComponent from "./components/VocabularyEditComponent";
+
 /**
  * First we will load all of this project's JavaScript dependencies which
  * includes Vue and other libraries. It is a great starting point when
@@ -7,6 +14,36 @@
 require('./bootstrap');
 
 window.Vue = require('vue');
+
+Vue.use(VueRouter);
+
+const router = new VueRouter({
+    mode: 'history',
+    routes: [
+        {
+            path: '/vocabulary',
+            name: 'vocabulary.list',
+            component: VocabularyListComponent
+        },
+        {
+            path: '/vocabulary/create',
+            name: 'vocabulary.create',
+            component: VocabularyCreateComponent
+        },
+        {
+            path: '/vocabulary/:vocabularyId',
+            name: 'vocabulary.show',
+            component: VocabularyShowComponent,
+            props: true
+        },
+        {
+            path: '/vocabulary/:vocabularyId/edit',
+            name: 'vocabulary.edit',
+            component: VocabularyEditComponent,
+            props: true
+      },
+    ]
+});
 
 /**
  * The following block of code may be used to automatically register your
@@ -20,6 +57,7 @@ window.Vue = require('vue');
 // files.keys().map(key => Vue.component(key.split('/').pop().split('.')[0], files(key).default))
 
 Vue.component('example-component', require('./components/ExampleComponent.vue').default);
+Vue.component('header-component', HeaderComponent);
 
 /**
  * Next, we will create a fresh Vue application instance and attach it to
@@ -29,4 +67,5 @@ Vue.component('example-component', require('./components/ExampleComponent.vue').
 
 const app = new Vue({
     el: '#app',
+    router
 });
