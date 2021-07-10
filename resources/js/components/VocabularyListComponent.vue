@@ -22,7 +22,9 @@
                   </router-link>
                 </td>
                 <td>
+                  <router-link v-bind:to="{name: 'vocabulary.edit', params: {vocabularyId: 1}}">
                     <button class="btn btn-success">Edit</button>
+                  </router-link>
                 </td>
                 <td>
                     <button class="btn btn-danger">Delete</button>
@@ -38,7 +40,9 @@
                   </router-link>
                 </td>
                 <td>
+                  <router-link v-bind:to="{name: 'vocabulary.edit', params: {vocabularyId: 1}}">
                     <button class="btn btn-success">Edit</button>
+                  </router-link>
                 </td>
                 <td>
                     <button class="btn btn-danger">Delete</button>
@@ -54,7 +58,9 @@
                   </router-link>
                 </td>
                 <td>
+                  <router-link v-bind:to="{name: 'vocabulary.edit', params: {vocabularyId: 1}}">
                     <button class="btn btn-success">Edit</button>
+                  </router-link>
                 </td>
                 <td>
                     <button class="btn btn-danger">Delete</button>
